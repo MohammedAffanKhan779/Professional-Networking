@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* LinkedIn-inspired professional palette */
+    --background: 0 0% 95.3%; /* #F3F2EF */
+    --foreground: 210 17% 12%; /* #1D2226 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 17% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 17% 12%;
+
+    /* LinkedIn Blue - Primary brand color */
+    --primary: 211 100% 40%; /* #0A66C2 */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 211 100% 25%; /* #004182 */
+
+    /* Secondary accent */
+    --secondary: 210 84% 58%; /* #378FE9 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 88%;
+    --muted-foreground: 0 0% 40%; /* #666666 */
+
+    --accent: 210 84% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%; /* #E0E0E0 */
+    --input: 0 0% 88%;
+    --ring: 211 100% 40%;
+
+    --radius: 0.5rem;
+
+    /* Success state */
+    --success: 158 64% 52%; /* #10B981 */
+    --success-foreground: 0 0% 100%;
+
+    /* Profile badge colors */
+    --badge-blue: 211 100% 40%;
+    --badge-green: 158 64% 52%;
+    --badge-purple: 258 90% 66%;
+    --badge-orange: 25 95% 53%;
+  }
+
+  .dark {
+    --background: 210 17% 12%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 17% 16%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 17% 16%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 211 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 211 100% 35%;
+
+    --secondary: 210 84% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 17% 20%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 210 84% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 17% 20%;
+    --input: 210 17% 20%;
+    --ring: 211 100% 50%;
+
+    --success: 158 64% 52%;
+    --success-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-xs { font-size: 0.75rem; }
+  .text-sm { font-size: 0.875rem; }
+  .text-base { font-size: 1rem; }
+  .text-lg { font-size: 1.125rem; }
+  .text-xl { font-size: 1.25rem; }
+  .text-2xl { font-size: 1.5rem; }
+  .text-3xl { font-size: 2rem; }
+  
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  .card-hover {
+    @apply transition-shadow duration-200 hover:shadow-lg;
+  }
+}
