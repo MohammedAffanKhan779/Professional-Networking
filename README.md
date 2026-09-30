@@ -49,7 +49,7 @@ A LinkedIn-like professional networking platform built with React, Node.js, Expr
 ## 📦 Installation
 
 ### Prerequisites
-- Node.js 16+
+- Node.js 18+
 - MySQL 8.0+
 - npm or yarn
 
@@ -262,4 +262,4 @@ Built with modern web technologies and best practices for database management, i
 
 **Version:** 2.0.0  
 **Last Updated:** October 2025  
-**Status:** Production Ready ✅
+**Status:** Student full-stack project — actively maintained
